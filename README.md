@@ -49,3 +49,5 @@
 * Сергей Густерев (s-gusterev)
 
 ## Ссылка на проект
+
+https://marinafominykh.github.io/lyubimovka/src/index.html
