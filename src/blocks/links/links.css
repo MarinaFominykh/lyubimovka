@@ -1,0 +1,122 @@
+.links {
+	display: flex;
+}
+
+.links_place_menu {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	margin: 0;
+}
+
+.link-container {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	border-right: 1px solid #242424;
+	gap: 44px;
+	margin: 11px 0 0 43px;
+	padding: 0 39px 11px 0;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.link-container:last-of-type {
+	border-right: none;
+}
+
+.link-container_social {
+	margin-left: 24px;
+	padding-right: 26px;
+	gap: 16px;
+}
+
+.link-container_donate {
+	margin-left: 23px;
+	padding-right: 20px;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.link-container__donate-icon {
+	background-image: url("../../images/icons/plus.svg");
+	width: 25px;
+	height: 25px;
+}
+
+.link-container__donate-container {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.link {
+	text-decoration: none;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	white-space: nowrap;
+	transition: .5s;
+	position: relative;
+}
+
+.link:hover {
+	background-color: #242424;
+	color: #ECEBE8;
+}
+
+.link_place_menu {
+	margin: 0;
+	font-size: 28px;
+	line-height: 32px;
+	letter-spacing: -0.01em;
+	font-family: 'Neue Machina', Arial, sans-serif;
+}
+
+.link_place_menu:hover {
+	background-color: transparent;
+	color: #242424;
+}
+
+.link_place_menu:hover::after {
+	content: url("../../images/icons/big-tab/ellipse-right.svg");
+	position: absolute;
+	top: -30%;
+}
+
+.link_place_menu:hover::before {
+	content: url("../../images/icons/big-tab/ellipse-left.svg");
+	position: absolute;
+	top: -30%;
+	left: -20px;
+}
+
+@media screen and (max-width: 1440px) {
+	.link-container:last-of-type {
+		border-right: none;
+		display: none;
+	}
+
+	.link-container:nth-of-type(2) {
+		border-right: none;
+	}
+}
+
+@media screen and (max-width: 1340px) {
+	.link-container:nth-of-type(2) {
+		border-right: none;
+		display: none;
+	}
+
+	.link-container {
+		border-right: none;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	.link-container {
+		border-right: none;
+		display: none;
+	}
+}

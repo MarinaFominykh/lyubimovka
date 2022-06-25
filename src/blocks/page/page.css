@@ -1,0 +1,13 @@
+.page {
+	background-color: #e5e5e5;
+	color: #242424;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+.page__container {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+}

@@ -1,0 +1,81 @@
+.card-review {
+	padding: 55px 88px 72px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	background-color: white;
+	color: #242423;
+	box-sizing: border-box;
+}
+
+.card-review__logo {
+	max-width: 241px;
+	height: 40px;
+	padding: 0;
+}
+
+.card-review__text {
+	margin: 47px 0 0;
+	font-family: "Formular", "Arial", sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 1.4;
+	letter-spacing: -0.01em;
+	color: #242424;
+}
+
+.card-review__url {
+	text-decoration: none;
+	margin: 40px auto 0 0;
+}
+
+.card-review__button {
+	padding: 0;
+	width: 210px;
+	height: 32px;
+	background-color: transparent;
+	border: none;
+	border-left: 1px solid #242424;
+	border-bottom: 1px solid #242424;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	font-family: "Formular", "Arial", sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 14px;
+	color: #242424;
+}
+
+.card-review__button-name {
+	margin: 0;
+	font-family: "Formular", "Arial", sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 14px;
+	color: #242424;
+}
+
+.card-review__button-image {
+	width: 25px;
+	height: 25px;
+}
+
+@media screen and (max-width: 1000px) {
+	.card-review {
+		padding: 77px 26px 72px 26px;
+	}
+
+	.card-review__logo {
+		margin-bottom: 35px;
+	}
+
+	.card-review__text {
+		margin-top: 0;
+	}
+}

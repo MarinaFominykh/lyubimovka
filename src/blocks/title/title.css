@@ -1,0 +1,36 @@
+.title {
+	font-family: "Neue Machina", Arial, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 40px;
+	letter-spacing: -0.01em;
+	max-width: 568px;
+	padding-left: 362px;
+}
+
+.title_place_photo {
+	margin: 0;
+	padding-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+    .title {
+		padding-left: 150px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .title_place_photo {
+        padding-bottom: 22px;
+    }
+
+	.title {
+		font-size: 28px;
+		line-height: 32px;
+		max-width: 360px;
+		padding-left: 24px;
+	}
+}
+

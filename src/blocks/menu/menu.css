@@ -1,0 +1,79 @@
+.menu__link-container {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	align-items: flex-start;
+	gap: 25px;
+	margin-left: 55px;
+	padding-left: 0;
+}
+
+.menu__donation-container {
+	margin-top: 69px;
+	display: flex;
+	flex-direction: column;
+	width: 361px;
+	align-self: flex-end;
+}
+
+.menu__social-container {
+	margin: 72px auto 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.menu__button {
+	padding-left: 16px;
+	display: flex;
+	border: solid #000000 1px;
+	border-right: none;
+	width: 100%;
+	min-height: 56px;
+	text-decoration: none;
+	color: #242424;
+	font-family: 'Formular', Arial, sans-serif;
+	line-height: 22px;
+	font-size: 16px;
+	box-sizing: border-box;
+	align-items: center;
+	position: relative;
+}
+
+.menu__button_size_big {
+	width: 416px;
+	border-bottom: solid #000000 1px;
+	border-left: none;
+}
+
+.menu__button_size_small {
+	width: 207px;
+	border-bottom: solid #000000 1px;
+	border-top: none;
+}
+
+.menu__button:last-of-type {
+	border-top: none;
+}
+
+.menu__button::after {
+	content: url("../../images/icons/arrows-black/arrow-right.svg");
+	position: absolute;
+	right: 19px;
+	top: calc(50% - 12px);
+}
+
+.menu__button:hover::after {
+	content: url("../../images/icons/arrows-white/arrow-right.svg");
+}
+
+.menu__button:hover {
+	background-color: #242424;
+	color: #e5e5e5;
+}
+
+.menu__footer {
+	display: flex;
+	margin-top: 32px;
+	margin-bottom: 63px;
+	margin-left: 25px;
+}
