@@ -2,6 +2,9 @@
 const burger = document.querySelector(".burger");
 const menuPopup = document.querySelector(".popup");
 const page = document.querySelector(".page");
+const videoButton = document.querySelector(".performance__video-play");
+const videoCover = document.querySelector(".performance__video-cover");
+const videoIframe = document.querySelector(".performance__iframe");
 
 // ---------------------------------------------------- functions
 function openPopup(popup) {
@@ -90,9 +93,7 @@ const swiperReview = new Swiper(".swiperReview", {
         1000: {
             slidesPerView: 1.5,
                     }
-
     },
-
 
 });
 
@@ -111,3 +112,54 @@ const deleteCloseListeners = () => {
 // ---------------------------------------------------- execution
 
 setCloseListeners();
+
+//YOUTUBE VIDEO API---------------------------------------
+
+const tag = document.createElement("script");
+tag.src = "//www.youtube.com/iframe_api";
+const firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function hideVideoElements() {
+    videoButton.classList.remove("performance__video-play_hide");
+    videoCover.classList.remove("performance__video-cover_hide");
+}
+
+function showVideElements() {
+    videoButton.classList.add("performance__video-play_hide");
+    videoCover.classList.add("performance__video-cover_hide");
+}
+
+function onYouTubeIframeAPIReady() {
+    let status;
+    player = new YT.Player(videoIframe, {
+        events: {
+            onStateChange: onPlayerStateChange,
+        },
+    });
+
+    function onPlayerStateChange(e) {
+        if (e.data == YT.PlayerState.PAUSED) {
+            status = YT.PlayerState.PAUSED;
+            hideVideoElements();
+        } else if (e.data == YT.PlayerState.PLAYING) {
+            status = YT.PlayerState.PLAYING;
+            showVideElements();
+        }
+    }
+
+    videoButton.addEventListener("click", () => {
+        if (status == YT.PlayerState.PLAYING) {
+            player.pauseVideo();
+            status = YT.PlayerState.PAUSED;
+            hideVideoElements();
+        } else {
+            player.playVideo();
+            status = YT.PlayerState.PLAYING;
+            showVideElements();
+        }
+    });
+}
+
+//--------------------------------------------------------
+

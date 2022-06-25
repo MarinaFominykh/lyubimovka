@@ -245,6 +245,12 @@
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
+	transition: visibility, opacity ease 0.9s;
+}
+
+.performance__video-cover_hide {
+	visibility: hidden;
+	opacity: 0;
 }
 
 .performance__video-play {
@@ -260,6 +266,12 @@
 	cursor: pointer;
 	border: none;
 	background-color: transparent;
+	transition: visibility, opacity ease 0.9s;
+}
+
+.performance__video-play_hide {
+	visibility: hidden;
+	opacity: 0;
 }
 
 .performance__iframe {
